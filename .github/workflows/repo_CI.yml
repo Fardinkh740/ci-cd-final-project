@@ -29,6 +29,5 @@ jobs:
           echo "Running flake8 with --count"
           flake8 . --count
 
-      - name: Run tests with nose2
-        run: nose2
-
+      - name: Run unit tests with nose (spec style)
+        run: nosetests -v --with-spec --spec-color
