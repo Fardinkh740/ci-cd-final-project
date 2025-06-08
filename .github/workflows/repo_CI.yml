@@ -24,8 +24,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install flake8 nose2
 
-      - name: Lint with flake8
-        run: flake8 .
+      - name: Lint with flake8 (with count)
+        run: |
+          echo "Running flake8 with --count"
+          flake8 . --count
 
       - name: Run tests with nose2
         run: nose2
