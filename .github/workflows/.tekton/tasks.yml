@@ -23,6 +23,9 @@ spec:
       image: python:3.11
       script: |
         #!/bin/sh
-        pip install nose
+        echo "Installing nose..."
+        pip install --no-cache-dir nose
+        echo "Running nose tests..."
         nosetests
+
 
